@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import hall from "@/data/hall.json";
-import { tierFor } from "@/lib/score";
 
 export const metadata: Metadata = {
   title: "The Rejection/Layoff Hall of Shame",
@@ -8,6 +7,15 @@ export const metadata: Metadata = {
 };
 
 type HallEntry = { id: string; company: string; kind: "rejection" | "layoff"; daysToReply?: number; words: number; tells: number; score: number; top: string[] };
+
+const QUIPS = [
+  "It's giving intern with a chatbot.",
+  "Did someone click send on the template?",
+  "Woof. Too busy to customize their rejection.",
+  "Touché. Applied with AI, rejected by AI.",
+  "\"Dear Candidate,\" said the mail merge.",
+  "Copy, paste, regret to inform.",
+];
 
 const entries = (hall as HallEntry[]).toSorted((a, b) => b.score - a.score);
 
@@ -27,7 +35,7 @@ export default function Hall() {
               <span className="text-5xl font-black text-hot">{e.score}</span>
               <div className="flex flex-1 flex-col gap-1">
                 <span className="text-xl font-black">#{i + 1} {e.company}</span>
-                <span className="font-semibold">{tierFor(e.score).headline} {e.tells} tells in {e.words} words{e.daysToReply !== undefined ? `, sent ${e.daysToReply} days after applying` : ""}.</span>
+                <span className="font-semibold">{e.tells} tells in {e.words} words{e.daysToReply !== undefined ? `, sent ${e.daysToReply} days after applying` : ""}. {QUIPS[i % QUIPS.length]}</span>
                 <span className="text-sm text-ink/70">{e.kind === "layoff" ? "Layoff" : "Rejection"} · {e.top.join(" · ")}</span>
               </div>
             </li>
