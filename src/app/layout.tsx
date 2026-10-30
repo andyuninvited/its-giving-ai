@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { REPO_URL } from "@/lib/card";
+import { REPO_URL, SITE_URL } from "@/lib/card";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000");
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: { default: "It's Giving AI", template: "%s | It's Giving AI" },
   description: "Paste any text and find out how much it's giving AI. Rejection emails, layoff memos, press releases, and your own drafts.",
   openGraph: { images: [{ url: "/api/card?s=88&w=137&t=12&k=delve|em-dashes|let%20me%20be%20clear", width: 1200, height: 630 }] },

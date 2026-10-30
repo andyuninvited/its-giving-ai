@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { MAX_CHARS, MIN_WORDS, scoreText, tierFor } from "@/lib/score";
-import { cardQuery, HASHTAGS, type Entry } from "@/lib/card";
+import { cardQuery, HASHTAGS, SITE_URL, type Entry } from "@/lib/card";
 import { SAMPLES } from "@/lib/samples";
 import { Highlighted } from "./highlighted";
 import { Pitch } from "./pitch";
@@ -25,8 +25,7 @@ export function Checker() {
     result && !tooShort
       ? cardQuery({ score: result.score, words: result.words, tells: result.tells, top: result.top.map((t) => t.label), entry: entry === "none" ? undefined : entry })
       : "";
-  const origin = typeof window === "undefined" ? "" : window.location.origin;
-  const shareUrl = `${origin}/c?${query}`;
+  const shareUrl = `${SITE_URL}/c?${query}`;
   const tag = entry === "none" ? "#ItsGivingAI" : `${HASHTAGS[entry]} #ItsGivingAI`;
   const shareText = tier ? `${tier.headline} ${result?.score}/100 on the slop meter. ${tag}` : "";
 
