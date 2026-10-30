@@ -3,7 +3,7 @@ import Link from "next/link";
 import fame from "@/data/fame.json";
 
 export const metadata: Metadata = {
-  title: "Hall of Fame: Actually Human Resources",
+  title: "Hall of Fame: Actually-Human Resources",
   description: "Companies that sent rejection emails scoring zero on the slop meter. Thank you, HR.",
 };
 
@@ -18,7 +18,7 @@ export default function Fame() {
         <p className="text-5xl" aria-hidden>
           🎉👏🙌
         </p>
-        <h1 className="text-4xl font-black sm:text-6xl">Hall of Fame: Actually Human Resources</h1>
+        <h1 className="text-4xl font-black sm:text-6xl">Hall of Fame: Actually-Human Resources</h1>
         <p className="text-lg">
           Getting rejected is personal, and these HR teams wrote like they knew it. Every company below sent a rejection email that scored zero on the slop meter, with no AI tells and none of the usual template phrases. Somebody took the time to write to a candidate like a person.
         </p>
