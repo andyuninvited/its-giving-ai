@@ -1,0 +1,19 @@
+{
+  "$comment": "Site-only rules layered on the write-like-a-human starter rules. Corporate autopilot phrases common in rejection and layoff emails.",
+  "rules": [
+    {
+      "id": "hope-finds-you-well",
+      "kind": "regex",
+      "pattern": "\\bhope (?:this|that|you|all)[^.!?\\n]{0,30}(?:finds you well|is well|are well|doing well)",
+      "message": "The opener everyone skips.",
+      "severity": "error"
+    },
+    {
+      "id": "corporate-autopilot",
+      "kind": "regex",
+      "pattern": "\\b(?:after careful (?:consideration|review)|move forward with other candidates|decided to (?:move forward|pursue) (?:with )?other|keep your (?:resume|cv|information) on file|wish you (?:the )?(?:best|success|all the best|luck) in your (?:search|job search|future endeavors|endeavors|career)|future endeavors|highly competitive|difficult decision|we were (?:very )?impressed|exciting journey|navigate (?:this|these) (?:changes|transition|challenging times)|restructur(?:e|ing) (?:efforts|to better)|position (?:ourselves|the company) for (?:long-term|future) (?:success|growth)|right-?siz(?:e|ing))\\b",
+      "message": "Corporate autopilot. A template wrote this.",
+      "severity": "warn"
+    }
+  ]
+}
