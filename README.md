@@ -33,4 +33,4 @@ Then run `pnpm score:hall`. It writes only numbers and tell labels to `src/data/
 
 ## License
 
-MIT for the code. Archivo Black is under the SIL Open Font License (`assets/fonts/OFL.txt`).
+MIT for the code. Archivo Black is under the SIL Open Font License (`assets/fonts/OFL.txt`). The favicon robot is from Google's [Noto Emoji](https://github.com/googlefonts/noto-emoji), Apache License 2.0.
