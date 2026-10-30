@@ -45,3 +45,4 @@ export const HASHTAGS: Record<Entry, string> = {
 };
 
 export const REPO_URL = "https://github.com/andyuninvited/write-like-a-human";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://its-giving-ai-vibes.vercel.app";
