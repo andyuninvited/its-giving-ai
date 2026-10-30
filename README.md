@@ -23,13 +23,13 @@ pnpm build
 
 ## Scoring the Hall of Shame
 
-Put email bodies as `.txt` files in `private/rejections/` (gitignored) with a `manifest.json` that gives each one a blurred company label:
+Put email bodies as `.txt` files in `private/rejections/` (gitignored) with a `manifest.json` that gives each one a blurred company label. From a Proton export: `python3 -I scripts/extract-eml.py <eml_dir> private/rejections/text`, `npx tsx scripts/score-private.ts`, then `python3 -I scripts/build-review.py private/rejections` to pick entries and export the manifest:
 
 ```json
 { "acme.txt": { "company": "████ (fintech, Series C)", "kind": "rejection", "daysToReply": 4 } }
 ```
 
-Then run `pnpm score:hall`. It writes only numbers and tell labels to `src/data/hall.json`.
+Then run `pnpm score:hall private/rejections/text`. It writes only numbers and tell labels to `src/data/hall.json`.
 
 ## License
 
