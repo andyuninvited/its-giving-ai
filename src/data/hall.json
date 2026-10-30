@@ -1,1 +1,325 @@
-[]
+[
+  {
+    "id": "e1",
+    "company": "no**@***ail.io",
+    "kind": "rejection",
+    "words": 110,
+    "tells": 3,
+    "score": 16,
+    "top": [
+      "corporate autopilot",
+      "genuinely"
+    ]
+  },
+  {
+    "id": "e2",
+    "company": "ta**@***ons.com",
+    "kind": "rejection",
+    "words": 76,
+    "tells": 2,
+    "score": 16,
+    "top": [
+      "corporate autopilot",
+      "truly"
+    ]
+  },
+  {
+    "id": "e3",
+    "company": "no**@***ail.io",
+    "kind": "rejection",
+    "words": 103,
+    "tells": 3,
+    "score": 17,
+    "top": [
+      "corporate autopilot",
+      "truly"
+    ]
+  },
+  {
+    "id": "e4",
+    "company": "no**@***gem.com",
+    "kind": "rejection",
+    "words": 105,
+    "tells": 3,
+    "score": 17,
+    "top": [
+      "corporate autopilot",
+      "genuinely",
+      "truly"
+    ]
+  },
+  {
+    "id": "e5",
+    "company": "no**@***ail.io",
+    "kind": "rejection",
+    "words": 139,
+    "tells": 4,
+    "score": 17,
+    "top": [
+      "corporate autopilot",
+      "in conclusion",
+      "rule of three"
+    ]
+  },
+  {
+    "id": "e6",
+    "company": "no**@***ike.me",
+    "kind": "rejection",
+    "words": 71,
+    "tells": 2,
+    "score": 17,
+    "top": [
+      "corporate autopilot"
+    ]
+  },
+  {
+    "id": "e7",
+    "company": "no**@***gem.com",
+    "kind": "rejection",
+    "words": 69,
+    "tells": 2,
+    "score": 17,
+    "top": [
+      "corporate autopilot"
+    ]
+  },
+  {
+    "id": "e8",
+    "company": "no**@***ail.com",
+    "kind": "rejection",
+    "words": 101,
+    "tells": 3,
+    "score": 18,
+    "top": [
+      "corporate autopilot"
+    ]
+  },
+  {
+    "id": "e9",
+    "company": "no**@***pot.com",
+    "kind": "rejection",
+    "words": 200,
+    "tells": 5,
+    "score": 18,
+    "top": [
+      "rule of three",
+      "em-dashes"
+    ]
+  },
+  {
+    "id": "e10",
+    "company": "no**@***yhq.com",
+    "kind": "rejection",
+    "words": 132,
+    "tells": 3,
+    "score": 18,
+    "top": [
+      "rule of three",
+      "not X, it's Y"
+    ]
+  },
+  {
+    "id": "e11",
+    "company": "ew**@***rks.com",
+    "kind": "rejection",
+    "words": 159,
+    "tells": 4,
+    "score": 19,
+    "top": [
+      "corporate autopilot",
+      "em-dashes",
+      "truly"
+    ]
+  },
+  {
+    "id": "e12",
+    "company": "no**@***pot.com",
+    "kind": "rejection",
+    "words": 207,
+    "tells": 6,
+    "score": 20,
+    "top": [
+      "rule of three",
+      "em-dashes"
+    ]
+  },
+  {
+    "id": "e13",
+    "company": "th**@***day.com",
+    "kind": "rejection",
+    "words": 121,
+    "tells": 4,
+    "score": 20,
+    "top": [
+      "corporate autopilot",
+      "truly"
+    ]
+  },
+  {
+    "id": "e14",
+    "company": "no**@***oup.com",
+    "kind": "rejection",
+    "words": 84,
+    "tells": 3,
+    "score": 21,
+    "top": [
+      "corporate autopilot",
+      "genuinely"
+    ]
+  },
+  {
+    "id": "e15",
+    "company": "no**@***ail.io",
+    "kind": "rejection",
+    "words": 56,
+    "tells": 1,
+    "score": 21,
+    "top": [
+      "throat-clearing"
+    ]
+  },
+  {
+    "id": "e16",
+    "company": "no**@***oup.com",
+    "kind": "rejection",
+    "words": 85,
+    "tells": 3,
+    "score": 21,
+    "top": [
+      "corporate autopilot",
+      "genuinely"
+    ]
+  },
+  {
+    "id": "e17",
+    "company": "no**@***yhq.com",
+    "kind": "rejection",
+    "words": 84,
+    "tells": 3,
+    "score": 21,
+    "top": [
+      "corporate autopilot"
+    ]
+  },
+  {
+    "id": "e18",
+    "company": "no**@***ing.com",
+    "kind": "rejection",
+    "words": 113,
+    "tells": 4,
+    "score": 21,
+    "top": [
+      "corporate autopilot"
+    ]
+  },
+  {
+    "id": "e19",
+    "company": "re**@***ord.com",
+    "kind": "rejection",
+    "words": 87,
+    "tells": 3,
+    "score": 21,
+    "top": [
+      "corporate autopilot",
+      "rule of three",
+      "truly"
+    ]
+  },
+  {
+    "id": "e20",
+    "company": "wo**@***xar.com",
+    "kind": "rejection",
+    "words": 82,
+    "tells": 3,
+    "score": 22,
+    "top": [
+      "corporate autopilot"
+    ]
+  },
+  {
+    "id": "e21",
+    "company": "no**@***ics.com",
+    "kind": "rejection",
+    "words": 133,
+    "tells": 4,
+    "score": 23,
+    "top": [
+      "corporate autopilot",
+      "em-dashes",
+      "genuinely",
+      "rule of three"
+    ]
+  },
+  {
+    "id": "e22",
+    "company": "no**@***ail.io",
+    "kind": "rejection",
+    "words": 125,
+    "tells": 5,
+    "score": 24,
+    "top": [
+      "corporate autopilot"
+    ]
+  },
+  {
+    "id": "e23",
+    "company": "no**@***gem.com",
+    "kind": "rejection",
+    "words": 93,
+    "tells": 4,
+    "score": 26,
+    "top": [
+      "corporate autopilot",
+      "genuinely"
+    ]
+  },
+  {
+    "id": "e24",
+    "company": "no**@***yhq.com",
+    "kind": "rejection",
+    "words": 93,
+    "tells": 3,
+    "score": 26,
+    "top": [
+      "corporate autopilot",
+      "not X, it's Y",
+      "truly"
+    ]
+  },
+  {
+    "id": "e25",
+    "company": "no**@***ail.io",
+    "kind": "rejection",
+    "words": 93,
+    "tells": 4,
+    "score": 26,
+    "top": [
+      "corporate autopilot",
+      "genuinely"
+    ]
+  },
+  {
+    "id": "e26",
+    "company": "no**@***ail.io",
+    "kind": "rejection",
+    "words": 136,
+    "tells": 5,
+    "score": 26,
+    "top": [
+      "corporate autopilot",
+      "not X, but Y"
+    ]
+  },
+  {
+    "id": "e27",
+    "company": "sa**@***day.com",
+    "kind": "rejection",
+    "words": 243,
+    "tells": 8,
+    "score": 37,
+    "top": [
+      "em-dashes",
+      "rule of three"
+    ]
+  }
+]
