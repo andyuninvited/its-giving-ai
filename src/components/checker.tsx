@@ -2,9 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { MAX_CHARS, MIN_WORDS, scoreText, tierFor } from "@/lib/score";
-import { cardQuery, HASHTAGS, REPO_URL, type Entry } from "@/lib/card";
+import { cardQuery, HASHTAGS, type Entry } from "@/lib/card";
 import { SAMPLES } from "@/lib/samples";
 import { Highlighted } from "./highlighted";
+import { Pitch } from "./pitch";
 
 const ENTRIES: { id: Entry | "none"; label: string }[] = [
   { id: "none", label: "Just roast me" },
@@ -102,9 +103,7 @@ export function Checker() {
             <button onClick={() => navigator.clipboard.writeText(`${shareText} ${shareUrl}`)} className="rounded-full border-2 border-ink px-5 py-2 font-bold hover:bg-ink hover:text-paper">Copy link</button>
           </div>
 
-          <p className="text-lg font-semibold">
-            Want AI to write like you instead? <a href={REPO_URL} className="text-hot underline">Teach it your voice with write-like-a-human.</a>
-          </p>
+          <Pitch />
         </div>
       )}
     </section>

@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
-import { parseCard, HASHTAGS } from "@/lib/card";
+import { parseCard, HASHTAGS, REPO_URL } from "@/lib/card";
 import { tierFor } from "@/lib/score";
 
 const INK = "#111111";
@@ -21,17 +21,17 @@ export async function GET(request: Request) {
 
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: INK, color: PAPER, padding: 64 }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: INK, color: PAPER, padding: "52px 64px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ display: "flex", fontSize: 34, color: HOT, letterSpacing: -1 }}>{"IT'S GIVING AI"}</div>
-            <div style={{ display: "flex", fontSize: 20, color: "#999999", marginTop: 4 }}>slop meter by write-like-a-human</div>
+            <div style={{ display: "flex", fontSize: 20, color: "#999999", marginTop: 4 }}>AI writing slop meter</div>
           </div>
           {card.entry && <div style={{ display: "flex", fontSize: 28, fontWeight: 700, color: INK, background: ACID, padding: "8px 20px", borderRadius: 999 }}>{HASHTAGS[card.entry]}</div>}
         </div>
         <div style={{ display: "flex", alignItems: "flex-end", gap: 48 }}>
           <div style={{ display: "flex", alignItems: "baseline" }}>
-            <div style={{ display: "flex", fontSize: 220, color: ACID, lineHeight: 1 }}>{card.score}</div>
+            <div style={{ display: "flex", fontSize: 190, color: ACID, lineHeight: 1 }}>{card.score}</div>
             <div style={{ display: "flex", fontSize: 44, fontWeight: 700, color: "#bbbbbb", marginLeft: 12 }}>/100</div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", flex: 1, paddingBottom: 24 }}>
@@ -39,13 +39,17 @@ export async function GET(request: Request) {
             <div style={{ display: "flex", fontSize: 28, color: "#cccccc", marginTop: 14 }}>{`${card.tells} tells in ${card.words} words`}</div>
           </div>
         </div>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
           <div style={{ display: "flex", gap: 12 }}>
             {card.top.map((t) => (
               <div key={t} style={{ display: "flex", fontSize: 28, fontWeight: 700, background: HOT, color: PAPER, padding: "8px 20px", borderRadius: 999 }}>
                 {t}
               </div>
             ))}
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", fontSize: 26, color: "#cccccc" }}>
+            <span>Teach your AI to write like you, a human.&nbsp;</span>
+            <span style={{ color: ACID }}>{REPO_URL}</span>
           </div>
         </div>
       </div>
