@@ -18,6 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="min-h-screen font-sans antialiased">
         <nav className="mx-auto flex max-w-4xl flex-wrap items-center gap-x-6 gap-y-2 px-4 pt-6 font-bold sm:px-6">
           <Link href="/" className="text-xl font-black text-hot">IT&apos;S GIVING AI</Link>
+          <Link href="/fame" className="hover:text-hot">Hall of Fame 🎉</Link>
           <Link href="/hall" className="hover:text-hot">Hall of Shame 🫣</Link>
           <Link href="/delvies" className="hover:text-hot">The Delvies 🏆</Link>
         </nav>
