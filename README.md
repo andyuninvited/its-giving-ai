@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# It's Giving AI
 
-## Getting Started
+Paste the rejection email, the layoff memo, the press release, or your own cover letter, and find out how much of it a human actually wrote.
 
-First, run the development server:
+The slop meter counts AI tells (delve, em-dashes, "not X, but Y", throat-clearing openers, corporate autopilot) and gives the text a 0 to 100 score with a shareable card. It's a tell-density score, not an AI detector, and humans write these phrases too.
+
+- **Private by design.** Text is checked in the browser and never sent anywhere. Share cards carry only the score, the word and tell counts, and up to three tell names from a fixed list.
+- **The Rejection/Layoff Hall of Shame** at `/hall`: real emails, scored, company names blurred.
+- **The Delvies** at `/delvies`: awards for the most AI-sounding corporate writing. Nominate with #TheDelvies.
+
+Rules come from [write-like-a-human](https://github.com/andyuninvited/write-like-a-human), which teaches AI to write like you instead.
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev          # http://localhost:3000
+pnpm test         # vitest
+pnpm typecheck
+pnpm lint
+pnpm build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scoring the Hall of Shame
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Put email bodies as `.txt` files in `private/rejections/` (gitignored) with a `manifest.json` that gives each one a blurred company label:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```json
+{ "acme.txt": { "company": "████ (fintech, Series C)", "kind": "rejection", "daysToReply": 4 } }
+```
 
-## Learn More
+Then run `pnpm score:hall`. It writes only numbers and tell labels to `src/data/hall.json`.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT for the code. Archivo Black is under the SIL Open Font License (`assets/fonts/OFL.txt`).
