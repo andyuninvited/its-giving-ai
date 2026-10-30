@@ -1,4 +1,5 @@
 import { REPO_URL } from "@/lib/card";
+import { CopyCommand } from "./copy-command";
 
 const POINTS = [
   { title: "It learns from your edits.", body: "Every time you fix one of its drafts, it notes what you changed. Fix the same thing twice and it becomes a rule." },
@@ -25,11 +26,15 @@ export function Pitch() {
           </li>
         ))}
       </ul>
+      <div className="flex flex-col gap-2">
+        <span className="font-black">Install it in Claude Code with one line:</span>
+        <CopyCommand command="/plugin install write-like-a-human --marketplace andyuninvited/write-like-a-human" />
+      </div>
       <div className="flex flex-wrap items-center gap-4">
         <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="rounded-full bg-ink px-8 py-3 text-lg font-black uppercase tracking-wide text-acid shadow-[5px_5px_0_var(--color-hot)] transition active:translate-x-1 active:translate-y-1 active:shadow-none">
-          Get write-like-a-human
+          Star it on GitHub
         </a>
-        <span className="font-semibold">Set up in Claude Code in about a minute.</span>
+        <span className="font-semibold">Then say &ldquo;set up write-like-a-human&rdquo; and it takes about a minute.</span>
       </div>
     </section>
   );
